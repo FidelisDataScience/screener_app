@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title%}
+  NSE solution
+{% endblock %}
+
+{% block main %}
+ {%for r in solution_text%}
+   <h2 style="text-align:center"> {{r}} </h2>
+{%endfor%}
+{% endblock %}
