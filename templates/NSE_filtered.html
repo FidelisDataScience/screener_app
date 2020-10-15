@@ -5,7 +5,23 @@
 {% endblock %}
 
 {% block main %}
- {%for r in solution_text%}
-   <h2 style="text-align:center"> {{r}} </h2>
-{%endfor%}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Stock</th>
+                <th>Rank</th>
+                <th>EOD Price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for row in solution_text %}
+                <tr>
+                    <td>{{ row.stock }}</td>
+                    <td>{{ row.rank }}</td>
+                    <td>{{ row.eod_price }}</td>
+            {% endfor %}
+            </tr>
+        </tbody>
+    </table>
 {% endblock %}
